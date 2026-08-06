@@ -110,9 +110,7 @@ Ao instalar o Python, são instalados diversos componentes importantes:
 - O terminal (Prompt), utilizado para executar comandos e instalar bibliotecas;
 - O IDLE, editor oficial do Python.
 
-Neste curso, utilizaremos o **Jupyter Web**, um ambiente baseado em células.
-
-Sua principal vantagem é permitir executar um pequeno trecho de código por vez, facilitando o aprendizado, os testes e a identificação de erros.
+Neste curso, utilizaremos o **Visual Studio Code**.
 
 ---
 
