@@ -25,7 +25,7 @@ O Python possui inúmeras aplicações, entre elas:
 - 🌐 Desenvolvimento Web (Back-end);
 - ⚙️ Automação de tarefas.
 
-> Um dos livros mais famosos sobre automação com Python chama-se **Automate the Boring Stuff with Python**.
+> Um dos livros mais famosos sobre automação com Python chama-se [**Automate the Boring Stuff with Python**](https://drive.google.com/file/d/1bQufTCf3gcGgWgOzPM-qzpeKo-LJ1bzN/view?usp=sharing).
 
 Neste curso, nosso foco será a criação de pequenos programas e o uso do Python para resolver problemas matemáticos e estatísticos simples.
 
