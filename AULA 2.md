@@ -297,3 +297,20 @@ Ao final desta aula você aprendeu:
 - criar decisões utilizando `if`, `elif` e `else`;
 - comparar valores utilizando operadores lógicos;
 - compreender a importância da indentação no Python.
+
+# Programa Completo
+```python
+print("Esse programa diz seu nome e revela o seu futuro")
+nome=input("Insira seu Nome:")
+idade=int(input("Digite sua idade:"))
+print(f"Boa tarde {nome} pelos meus calculos você tem {idade} anos")
+previsao=input("Quer saber sobre seu futuro? S/N")
+if previsao=="S":
+    futuro=idade+100
+    print(f"Daqui a 100 anos você terá {futuro} anos")
+elif previsao=="N":
+    print("Que pena, fica pra próxima")
+else:
+    print("❌DIGITA DIREITO PÔ‼❌, SÓ S/N")
+
+```
