@@ -84,7 +84,7 @@ Quando executar a célula, aparecerá uma caixa para digitar o nome.
 Agora peça também a idade:
 
 ```python
-idade = int(input("Insira sua idade: "))
+IDADE = int(input("Insira sua idade: "))
 ```
 
 Observe que utilizamos:
