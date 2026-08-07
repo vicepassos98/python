@@ -76,7 +76,7 @@ Vamos criar uma nova versão do nosso programa.
 Agora o usuário informará seu próprio nome e sua idade.
 
 ```python
-nome = input("Insira seu nome, por obséquio: ")
+NOME = input("Insira seu nome, por obséquio: ")
 ```
 
 Quando executar a célula, aparecerá uma caixa para digitar o nome.
