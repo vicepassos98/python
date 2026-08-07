@@ -37,7 +37,7 @@ nome = "Seu Nome"      # Substitua pelo seu nome
 idade = 18             # Digite apenas o número
 ```
 
-Execute a célula com **Shift + Enter**.
+Execute a célula com **Ctrl + Alt + Enter**.
 
 Na célula seguinte, escreva:
 
