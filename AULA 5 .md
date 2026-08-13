@@ -1,4 +1,4 @@
-# Aula 5 — Explorando o `for`
+# Aula 5 — Explorando o `for` e criando Listas
 
 Na aula anterior aprendemos a utilizar o `for` juntamente com a função `range()`.
 
