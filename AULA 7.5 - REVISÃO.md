@@ -61,7 +61,7 @@ Depois utilize um `for` para mostrar todos os nomes.
 
 ---
 ## Programa 4 - Amor ao próximo
-crie um programa que permita que seu colega a mandar uma mensagem para você
+crie um programa que permita que seu colega mande uma mensagem para você
 ---
 
 ## Exercício 5 — Contador regressivo
