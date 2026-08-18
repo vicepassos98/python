@@ -33,23 +33,9 @@ O objetivo de hoje é descobrir como juntar todas essas ferramentas para criar p
 
 Antes dos programas maiores, vamos fazer alguns exercícios rápidos.
 
-## Exercício 1 — Par ou ímpar
+## Exercício 1 — Positivo ou negativo
 
-Crie um programa que receba um número inteiro e informe se ele é par ou ímpar.
-
-Dica:
-
-```python
-numero % 2
-```
-
-O operador `%` retorna o resto de uma divisão.
-
----
-
-## Exercício 2 — Positivo ou negativo
-
-Modifique o programa anterior para também informar se o número é:
+Crie um programa para informar se o número é:
 
 * positivo;
 * negativo;
@@ -57,7 +43,7 @@ Modifique o programa anterior para também informar se o número é:
 
 ---
 
-## Exercício 3 — Contagem
+## Exercício 2 — Contagem
 
 Utilize um `for` para imprimir os números de 1 até 10.
 
@@ -65,7 +51,7 @@ Depois modifique o programa para imprimir somente os números pares.
 
 ---
 
-## Exercício 4 — Lista
+## Exercício 3 — Lista
 
 Crie uma lista chamada `nomes`.
 
@@ -74,265 +60,268 @@ Adicione cinco nomes utilizando `.append()`.
 Depois utilize um `for` para mostrar todos os nomes.
 
 ---
-
-# Programa 1 — Caixa Eletrônico
-
-Agora vamos criar um programa um pouco maior.
-
-## O problema
-
-Imagine que precisamos criar um caixa eletrônico simplificado.
-
-O programa começa com:
-
-```text
-Saldo inicial: R$ 1.000
-```
-
-O usuário deverá encontrar o seguinte menu:
-
-```text
-=== CAIXA ELETRÔNICO ===
-
-1 - Consultar saldo
-2 - Depositar
-3 - Sacar
-4 - Sair
-```
-
-O programa deverá continuar funcionando até que o usuário escolha a opção `4`.
-
+## Programa 4 - Amor ao próximo
+crie um programa que permita que seu colega a mandar uma mensagem para você
 ---
 
-## Requisitos
+## Exercício 5 — Contador regressivo
 
-### Opção 1 — Consultar saldo
+Utilizando um `for`, faça uma contagem regressiva:
 
-Mostrar o saldo atual.
+```text
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+
+BOOM!
+```
+
+### Desafio
+
+Faça o usuário escolher de onde a contagem deve começar.
 
 Exemplo:
 
 ```text
-Seu saldo atual é de R$ 1000
+Digite o número inicial: 5
+
+5
+4
+3
+2
+1
+
+BOOM!
 ```
 
 ---
 
-### Opção 2 — Depositar
+## Exercício 6 — Somando números
 
-Perguntar quanto o usuário deseja depositar.
+Peça ao usuário **5 números** e calcule a soma deles.
 
-Depois adicionar esse valor ao saldo.
+### Dica
 
-Exemplo:
+Crie uma variável para armazenar a soma:
+
+```python
+soma = 0
+```
+
+Depois utilize um `for` para repetir a entrada cinco vezes.
+
+### Desafio
+
+Além da soma, mostre a média dos números.
+
+---
+
+## Exercício 7 — Qual é o maior?
+
+Peça ao usuário cinco números e descubra qual foi o maior.
+
+### Desafio 1
+
+Tente resolver utilizando apenas `if` e variáveis.
+
+### Desafio 2
+
+Depois tente resolver utilizando uma lista e a função:
+
+```python
+max()
+```
+
+> Existem várias maneiras de resolver o mesmo problema em programação. Nem sempre a primeira solução é a melhor solução.
+
+---
+
+## Exercício 8 — Lista de compras
+
+Crie uma lista vazia:
+
+```python
+compras = []
+```
+
+Peça ao usuário **5 produtos** e adicione todos à lista.
+
+Depois mostre a lista:
 
 ```text
-Valor do depósito: 250
+=== LISTA DE COMPRAS ===
 
-Depósito realizado.
-Seu novo saldo é R$ 1250
+1 - Arroz
+2 - Feijão
+3 - Café
+4 - Leite
+5 - Macarrão
 ```
+
+### Você provavelmente precisará utilizar:
+
+- `input()`
+- `.append()`
+- `for`
+- `enumerate()`
 
 ---
 
-### Opção 3 — Sacar
+## Exercício 9 — Procurando na lista
 
-Perguntar quanto o usuário deseja sacar.
+Utilize a lista de compras criada anteriormente.
 
-O saque somente poderá ser realizado caso exista saldo suficiente.
+Peça ao usuário para informar um produto e verifique se ele está cadastrado.
+
+Se estiver:
+
+```text
+Produto encontrado!
+```
 
 Caso contrário:
 
 ```text
-Saldo insuficiente.
+Produto não encontrado.
+```
+
+### Dica
+
+Podemos verificar se um elemento está dentro de uma lista utilizando:
+
+```python
+if produto in compras:
 ```
 
 ---
 
-### Opção 4 — Sair
+## Exercício 10 — Boletim rápido
 
-Encerrar o programa.
+Crie duas listas:
+
+```python
+alunos = ["Ana", "João", "Carlos", "Maria"]
+
+notas = [8, 5, 9, 4]
+```
+
+Utilize um `for` para mostrar:
+
+```text
+Ana - 8 - APROVADA
+João - 5 - APROVADO
+Carlos - 9 - APROVADO
+Maria - 4 - REPROVADA
+```
+
+Considere aprovado o aluno com nota maior ou igual a `5`.
+
+### Dica
+
+Você precisará combinar:
+
+- listas paralelas;
+- `for`;
+- `if`.
 
 ---
 
-## Dicas
+# Parte 3 — Repetição
+
+Agora vamos revisar `while`.
+
+---
+
+## Exercício 11 — Senha
+
+Crie um programa que peça uma senha ao usuário.
+
+Enquanto a senha estiver errada, o programa deverá continuar perguntando.
+
+Quando a senha estiver correta:
+
+```text
+Acesso autorizado!
+```
+
+### Dica
 
 Você provavelmente precisará utilizar:
+
+```python
+while
+```
+
+e:
+
+```python
+break
+```
+
+### Desafio
+
+Informe ao usuário quando a senha estiver incorreta:
+
+```text
+Senha incorreta. Tente novamente.
+```
+
+---
+
+## Exercício 12 — Menu
+
+Crie um programa com o seguinte menu:
+
+```text
+=== MENU ===
+
+1 - Dizer bom dia
+2 - Dizer boa tarde
+3 - Dizer boa noite
+4 - Sair
+```
+
+O menu deverá continuar aparecendo até que o usuário escolha a opção `4`.
+
+Exemplo:
+
+```text
+=== MENU ===
+
+1 - Dizer bom dia
+2 - Dizer boa tarde
+3 - Dizer boa noite
+4 - Sair
+
+Escolha: 1
+
+Bom dia!
+```
+
+Depois disso, o menu deverá aparecer novamente.
+
+### Dica
+
+Aqui você precisará combinar:
 
 ```python
 while True
 ```
 
+com:
+
 ```python
 if / elif / else
 ```
 
-```python
-input()
-```
-
-```python
-break
-```
-
-E operações matemáticas para alterar o saldo.
-
----
-
-## Desafio extra
-
-Adicione uma regra:
-
-> O usuário não pode depositar ou sacar valores menores ou iguais a zero.
-
----
-
-# Programa 2 — Cadastro de Notas
-
-Agora vamos criar um programa para controlar as notas de uma turma.
-
-Diferentemente do programa anterior, vamos precisar armazenar várias informações.
-
-Para isso utilizaremos **listas paralelas**.
-
----
-
-## Estrutura inicial
-
-Crie duas listas:
-
-```python
-alunos = []
-notas = []
-```
-
-A primeira armazenará os nomes.
-
-A segunda armazenará as notas.
-
-Por exemplo:
-
-| Posição | Aluno  | Nota |
-| ------: | ------ | ---: |
-|       0 | Ana    |    8 |
-|       1 | Carlos |    6 |
-|       2 | João   |    9 |
-
-Observe que o aluno e sua nota ocupam a mesma posição nas duas listas.
-
----
-
-# Menu
-
-Nosso programa deverá apresentar:
-
-```text
-=== SISTEMA DE NOTAS ===
-
-1 - Cadastrar aluno
-2 - Visualizar alunos
-3 - Média da turma
-4 - Maior nota
-5 - Sair
-```
-
-O programa deverá funcionar continuamente até o usuário escolher a opção `5`.
-
----
-
-# Opção 1 — Cadastrar aluno
-
-O programa deverá perguntar:
-
-```text
-Nome do aluno:
-Nota:
-```
-
-Depois deverá adicionar as duas informações às suas respectivas listas.
-
-Você provavelmente precisará utilizar:
-
-```python
-.append()
-```
-
----
-
-# Opção 2 — Visualizar alunos
-
-O programa deverá mostrar todos os alunos cadastrados.
-
-Exemplo:
-
-```text
-=== ALUNOS ===
-
-Ana - 8
-Carlos - 6
-João - 9
-```
-
-Utilize um `for`.
-
-Uma possibilidade é utilizar:
-
-```python
-for i in range(len(alunos)):
-```
-
-Dessa maneira podemos acessar as duas listas através da mesma posição:
-
-```python
-alunos[i]
-notas[i]
-```
-
----
-
-# Opção 3 — Média da turma
-
-Calcule a média de todas as notas cadastradas.
-
-Uma possibilidade:
-
-```python
-media = sum(notas) / len(notas)
-```
-
-Depois mostre o resultado.
-
----
-
-# Opção 4 — Maior nota
-
-Descubra qual foi a maior nota da turma.
-
-Podemos utilizar:
-
-```python
-maior = max(notas)
-```
-
-Mas o programa deverá mostrar também **quem tirou essa nota**.
-
-Dica:
-
-```python
-indice = notas.index(max(notas))
-```
-
-Depois podemos utilizar esse índice para encontrar o aluno:
-
-```python
-alunos[indice]
-```
-
----
-
-# Opção 5 — Sair
-
-Encerre o programa utilizando:
+e:
 
 ```python
 break
@@ -340,79 +329,26 @@ break
 
 ---
 
-# Desafio extra
 
-Depois que o programa estiver funcionando, adicione uma nova opção:
 
-```text
-6 - Mostrar aprovados
-```
+## Programa 1 - Sistema de Pedidos
 
-Considere aprovado o aluno com nota maior ou igual a `5`.
+Crie um programa capaz de gerenciar os pedidos de uma açaoteria
 
-O resultado deverá ser algo parecido com:
+O programa deve funcionar de forma continua e só será encerrado caso o usuário desejar
 
-```text
-=== APROVADOS ===
+O primeiro menu vai permitir:
+- Novo Pedido
+- Histórico
+- Sair
 
-Ana - 8
-João - 9
-```
+O sistema de pedido será composto por alguns menus.
 
-Para isso, será necessário combinar:
+O primeiro passo é pedir para o usuário inserir seu nome
 
-* `for`;
-* listas paralelas;
-* `if`.
+Depois vamos para o menu de escolha de tamanho de copo. Mostre os 3 tamanhos disponíveis e seus repectivos preços.
 
----
+Após a seleção do tamanho, pe
 
-# Desafio final
+Em cada etapa você deve salvar a opção escolhida pelo cliente e o preço dos intens.
 
-Agora tente melhorar o programa sem receber novas instruções.
-
-Algumas possibilidades:
-
-* impedir cadastro de notas menores que 0 ou maiores que 10;
-* mostrar a menor nota;
-* mostrar quantos alunos foram cadastrados;
-* mostrar quantos alunos foram aprovados;
-* mostrar quantos alunos foram reprovados;
-* permitir remover um aluno.
-
----
-
-# O que revisamos?
-
-Ao final da aula, tente identificar onde cada conceito apareceu.
-
-| Conceito    | Onde utilizamos?                   |
-| ----------- | ---------------------------------- |
-| Variáveis   | Saldo, notas, nomes etc.           |
-| `input()`   | Receber informações do usuário     |
-| `if`        | Tomar decisões                     |
-| `elif`      | Criar diferentes opções            |
-| `else`      | Tratar situações diferentes        |
-| `while`     | Manter o programa funcionando      |
-| `for`       | Percorrer listas                   |
-| `break`     | Encerrar o programa                |
-| Listas      | Armazenar vários dados             |
-| `.append()` | Cadastrar informações              |
-| `len()`     | Descobrir quantidade de elementos  |
-| `max()`     | Encontrar maior valor              |
-| `sum()`     | Somar valores                      |
-| `.index()`  | Encontrar a posição de um elemento |
-
----
-
-# Conclusão
-
-Até agora aprendemos várias ferramentas separadamente.
-
-Hoje começamos a utilizá-las juntas.
-
-Esse é um dos pontos mais importantes do aprendizado de programação:
-
-> **Programar não é decorar comandos. É saber combinar ferramentas para resolver problemas.**
-
-A partir daqui, os programas podem começar a ficar maiores e mais complexos. O próximo passo será aprender novas ferramentas para trabalhar com dados de maneira mais eficiente.
