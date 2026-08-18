@@ -1,0 +1,418 @@
+# Aula 7.5 — Revisão: Juntando as Peças
+
+Até agora aprendemos vários conceitos diferentes de Python.
+
+Nesta aula não vamos aprender uma grande função nova. A ideia é **revisar e combinar os conteúdos que já vimos**.
+
+Até aqui aprendemos:
+
+* `print()` → mostrar informações;
+* variáveis → armazenar informações;
+* `int`, `float` e `str` → tipos de valores;
+* operadores matemáticos;
+* `input()` → receber informações;
+* `if`, `elif` e `else` → tomar decisões;
+* `while` → repetir um processo;
+* `for` → repetir processos uma quantidade determinada de vezes;
+* `break` → interromper um loop;
+* `continue` → voltar para o início do loop;
+* listas → armazenar vários valores;
+* `.append()` → adicionar elementos;
+* `.remove()` → remover elementos;
+* `.clear()` → limpar uma lista;
+* `len()` → descobrir o tamanho de uma lista;
+* `enumerate()` → percorrer uma lista mantendo sua numeração;
+* listas paralelas → relacionar informações por posição;
+* dicionários → organizar informações através de chaves.
+
+O objetivo de hoje é descobrir como juntar todas essas ferramentas para criar programas completos.
+
+---
+
+# Aquecimento
+
+Antes dos programas maiores, vamos fazer alguns exercícios rápidos.
+
+## Exercício 1 — Par ou ímpar
+
+Crie um programa que receba um número inteiro e informe se ele é par ou ímpar.
+
+Dica:
+
+```python
+numero % 2
+```
+
+O operador `%` retorna o resto de uma divisão.
+
+---
+
+## Exercício 2 — Positivo ou negativo
+
+Modifique o programa anterior para também informar se o número é:
+
+* positivo;
+* negativo;
+* zero.
+
+---
+
+## Exercício 3 — Contagem
+
+Utilize um `for` para imprimir os números de 1 até 10.
+
+Depois modifique o programa para imprimir somente os números pares.
+
+---
+
+## Exercício 4 — Lista
+
+Crie uma lista chamada `nomes`.
+
+Adicione cinco nomes utilizando `.append()`.
+
+Depois utilize um `for` para mostrar todos os nomes.
+
+---
+
+# Programa 1 — Caixa Eletrônico
+
+Agora vamos criar um programa um pouco maior.
+
+## O problema
+
+Imagine que precisamos criar um caixa eletrônico simplificado.
+
+O programa começa com:
+
+```text
+Saldo inicial: R$ 1.000
+```
+
+O usuário deverá encontrar o seguinte menu:
+
+```text
+=== CAIXA ELETRÔNICO ===
+
+1 - Consultar saldo
+2 - Depositar
+3 - Sacar
+4 - Sair
+```
+
+O programa deverá continuar funcionando até que o usuário escolha a opção `4`.
+
+---
+
+## Requisitos
+
+### Opção 1 — Consultar saldo
+
+Mostrar o saldo atual.
+
+Exemplo:
+
+```text
+Seu saldo atual é de R$ 1000
+```
+
+---
+
+### Opção 2 — Depositar
+
+Perguntar quanto o usuário deseja depositar.
+
+Depois adicionar esse valor ao saldo.
+
+Exemplo:
+
+```text
+Valor do depósito: 250
+
+Depósito realizado.
+Seu novo saldo é R$ 1250
+```
+
+---
+
+### Opção 3 — Sacar
+
+Perguntar quanto o usuário deseja sacar.
+
+O saque somente poderá ser realizado caso exista saldo suficiente.
+
+Caso contrário:
+
+```text
+Saldo insuficiente.
+```
+
+---
+
+### Opção 4 — Sair
+
+Encerrar o programa.
+
+---
+
+## Dicas
+
+Você provavelmente precisará utilizar:
+
+```python
+while True
+```
+
+```python
+if / elif / else
+```
+
+```python
+input()
+```
+
+```python
+break
+```
+
+E operações matemáticas para alterar o saldo.
+
+---
+
+## Desafio extra
+
+Adicione uma regra:
+
+> O usuário não pode depositar ou sacar valores menores ou iguais a zero.
+
+---
+
+# Programa 2 — Cadastro de Notas
+
+Agora vamos criar um programa para controlar as notas de uma turma.
+
+Diferentemente do programa anterior, vamos precisar armazenar várias informações.
+
+Para isso utilizaremos **listas paralelas**.
+
+---
+
+## Estrutura inicial
+
+Crie duas listas:
+
+```python
+alunos = []
+notas = []
+```
+
+A primeira armazenará os nomes.
+
+A segunda armazenará as notas.
+
+Por exemplo:
+
+| Posição | Aluno  | Nota |
+| ------: | ------ | ---: |
+|       0 | Ana    |    8 |
+|       1 | Carlos |    6 |
+|       2 | João   |    9 |
+
+Observe que o aluno e sua nota ocupam a mesma posição nas duas listas.
+
+---
+
+# Menu
+
+Nosso programa deverá apresentar:
+
+```text
+=== SISTEMA DE NOTAS ===
+
+1 - Cadastrar aluno
+2 - Visualizar alunos
+3 - Média da turma
+4 - Maior nota
+5 - Sair
+```
+
+O programa deverá funcionar continuamente até o usuário escolher a opção `5`.
+
+---
+
+# Opção 1 — Cadastrar aluno
+
+O programa deverá perguntar:
+
+```text
+Nome do aluno:
+Nota:
+```
+
+Depois deverá adicionar as duas informações às suas respectivas listas.
+
+Você provavelmente precisará utilizar:
+
+```python
+.append()
+```
+
+---
+
+# Opção 2 — Visualizar alunos
+
+O programa deverá mostrar todos os alunos cadastrados.
+
+Exemplo:
+
+```text
+=== ALUNOS ===
+
+Ana - 8
+Carlos - 6
+João - 9
+```
+
+Utilize um `for`.
+
+Uma possibilidade é utilizar:
+
+```python
+for i in range(len(alunos)):
+```
+
+Dessa maneira podemos acessar as duas listas através da mesma posição:
+
+```python
+alunos[i]
+notas[i]
+```
+
+---
+
+# Opção 3 — Média da turma
+
+Calcule a média de todas as notas cadastradas.
+
+Uma possibilidade:
+
+```python
+media = sum(notas) / len(notas)
+```
+
+Depois mostre o resultado.
+
+---
+
+# Opção 4 — Maior nota
+
+Descubra qual foi a maior nota da turma.
+
+Podemos utilizar:
+
+```python
+maior = max(notas)
+```
+
+Mas o programa deverá mostrar também **quem tirou essa nota**.
+
+Dica:
+
+```python
+indice = notas.index(max(notas))
+```
+
+Depois podemos utilizar esse índice para encontrar o aluno:
+
+```python
+alunos[indice]
+```
+
+---
+
+# Opção 5 — Sair
+
+Encerre o programa utilizando:
+
+```python
+break
+```
+
+---
+
+# Desafio extra
+
+Depois que o programa estiver funcionando, adicione uma nova opção:
+
+```text
+6 - Mostrar aprovados
+```
+
+Considere aprovado o aluno com nota maior ou igual a `5`.
+
+O resultado deverá ser algo parecido com:
+
+```text
+=== APROVADOS ===
+
+Ana - 8
+João - 9
+```
+
+Para isso, será necessário combinar:
+
+* `for`;
+* listas paralelas;
+* `if`.
+
+---
+
+# Desafio final
+
+Agora tente melhorar o programa sem receber novas instruções.
+
+Algumas possibilidades:
+
+* impedir cadastro de notas menores que 0 ou maiores que 10;
+* mostrar a menor nota;
+* mostrar quantos alunos foram cadastrados;
+* mostrar quantos alunos foram aprovados;
+* mostrar quantos alunos foram reprovados;
+* permitir remover um aluno.
+
+---
+
+# O que revisamos?
+
+Ao final da aula, tente identificar onde cada conceito apareceu.
+
+| Conceito    | Onde utilizamos?                   |
+| ----------- | ---------------------------------- |
+| Variáveis   | Saldo, notas, nomes etc.           |
+| `input()`   | Receber informações do usuário     |
+| `if`        | Tomar decisões                     |
+| `elif`      | Criar diferentes opções            |
+| `else`      | Tratar situações diferentes        |
+| `while`     | Manter o programa funcionando      |
+| `for`       | Percorrer listas                   |
+| `break`     | Encerrar o programa                |
+| Listas      | Armazenar vários dados             |
+| `.append()` | Cadastrar informações              |
+| `len()`     | Descobrir quantidade de elementos  |
+| `max()`     | Encontrar maior valor              |
+| `sum()`     | Somar valores                      |
+| `.index()`  | Encontrar a posição de um elemento |
+
+---
+
+# Conclusão
+
+Até agora aprendemos várias ferramentas separadamente.
+
+Hoje começamos a utilizá-las juntas.
+
+Esse é um dos pontos mais importantes do aprendizado de programação:
+
+> **Programar não é decorar comandos. É saber combinar ferramentas para resolver problemas.**
+
+A partir daqui, os programas podem começar a ficar maiores e mais complexos. O próximo passo será aprender novas ferramentas para trabalhar com dados de maneira mais eficiente.
