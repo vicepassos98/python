@@ -116,6 +116,26 @@ Da seguinte lista:
 temperaturas = [26, 28.5, 30.1, 35, 29.4, 23.5, 19]
 ```
 
+## Exercício 2 — NumPy
+
+Uma loja registrou a quantidade de produtos vendidos durante 7 dias:
+
+```python
+vendas = [12, 18, 15, 21, 17, 25, 20]
+```
+
+Utilizando NumPy:
+
+- transforme a lista em um array;
+- calcule a média de vendas;
+- descubra o maior número de vendas;
+- descubra o menor número de vendas;
+- calcule quantas vendas ficaram acima da média.
+
+Dica: você pode utilizar uma condição para comparar os valores com a média.
+
+
+
 ---
 
 # Introdução ao Pandas
@@ -173,6 +193,23 @@ Exiba apenas a coluna:
 
 ---
 
+## Exercício 3 — Filtrando dados
+
+Utilizando o DataFrame df, mostre:
+
+os alunos que possuem nota maior ou igual a 7;
+os alunos que possuem menos de 3 faltas;
+apenas os nomes dos alunos que possuem nota menor que 5.
+
+Dica:
+```python
+df[df["nota"] >= 7]
+```
+Para selecionar apenas uma coluna:
+
+```python
+df[df["nota"] >= 7]["aluno"]
+```
 # Estatísticas de uma coluna
 
 Agora podemos utilizar praticamente as mesmas funções vistas no NumPy.
@@ -186,6 +223,7 @@ print("Mínimo:", df["nota"].min())
 ```
 
 ---
+
 
 # Describe
 
@@ -201,7 +239,7 @@ Observe que várias informações obtidas anteriormente aparecem em apenas um co
 
 ---
 
-## Exercício 3
+## Exercício 4
 
 Utilize `describe()` para analisar a coluna `faltas`.
 
@@ -223,7 +261,7 @@ A nova coluna será composta por valores lógicos (`True` e `False`).
 
 ---
 
-## Exercício 4
+## Exercício 5
 
 Crie uma coluna chamada `frequente`.
 
@@ -282,7 +320,7 @@ O `groupby()` é uma das funções mais utilizadas em análise de dados e será 
 
 ---
 
-## Exercício 5
+## Exercício 6
 
 Utilizando a coluna `turma`, determine:
 
