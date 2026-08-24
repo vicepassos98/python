@@ -1,4 +1,4 @@
-# Aula 10 — Introdução ao NumPy e Pandas
+# Aula 10 — Introdução ao NumPy6️⃣7️⃣ e Pandas🐼🐼
 
 Até agora escrevemos nossos programas utilizando apenas recursos da própria linguagem Python.
 
@@ -14,6 +14,21 @@ Nesta aula conheceremos duas das bibliotecas mais importantes para análise de d
 - **Pandas**: manipulação e análise de tabelas de dados.
 
 ---
+
+# Baixando as bibliotecas
+
+Para o uso de algumas bibliotecas temos que baixá-las.
+
+Para isso, vamos procurar a guia "Terminal" no Visual Studio e rodar as duas linhas abaixo:
+
+```python
+pip install pandas
+pip install numpy
+```
+
+Essas linhas vão baixar as duas bibliotecas que vamos usar hoje.
+
+LEMBRETE: No seu trabalho final, caso for usar outras bibliotecas, 
 
 # Importando bibliotecas
 
@@ -35,7 +50,7 @@ Esses apelidos apenas tornam o código mais curto.
 
 ---
 
-# Trabalhando com NumPy
+# Trabalhando com NumPy 6️⃣7️⃣ 4️⃣2️⃣
 
 Vamos começar criando uma lista de notas.
 
@@ -138,7 +153,9 @@ Dica: você pode utilizar uma condição para comparar os valores com a média.
 
 ---
 
-# Introdução ao Pandas
+# Introdução ao Pandas 🐼🐼🐼🐼
+
+
 
 Enquanto o NumPy trabalha principalmente com cálculos numéricos, o **Pandas** foi desenvolvido para trabalhar com tabelas.
 
